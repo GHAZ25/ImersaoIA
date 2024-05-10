@@ -1,0 +1,76 @@
+{
+    "criaturas": [{
+        "imagem": "https://raw.githubusercontent.com/GHAZ25/ImersaoIA/main/criaturas/dragao.jpg",
+        "atributos": {
+            "nome": "Dragão",
+            "limite": 1,
+            "locais": "Apenas na montanha perto de Etherium",
+            "saude": 9999,
+            "ataque": 255,
+            "defesa": 170,
+            "velocidade": 50,
+            "inteligencia": 120,
+            "encontro": 10,
+            "recompensa": "Espada lendária de Zorzium",
+            "receber": 100
+        }
+    },{
+        "imagem": "https://raw.githubusercontent.com/GHAZ25/ImersaoIA/main/criaturas/wolf.jpg",
+        "atributos": {
+            "nome": "Lobo",
+            "limite": 15,
+            "locais": "Florestas",
+            "saude": 300,
+            "ataque": 30,
+            "defesa": 20,
+            "velocidade": 50,
+            "inteligencia": 120,
+            "encontro": 0.5
+        }
+    },{
+        "imagem": "https://raw.githubusercontent.com/GHAZ25/ImersaoIA/main/criaturas/goblin.jpg",
+        "atributos": {
+            "nome": "Goblin",
+            "limite": 100,
+            "locais": "Florestas e montanhas",
+            "saude": 50,
+            "ataque": 5,
+            "defesa": 5,
+            "velocidade": 10,
+            "inteligencia": 0,
+            "encontro": 10,
+            "recompensa": "Moedas de bronze ou adaga",
+            "receber": 10
+        }
+    },{
+        "imagem": "https://raw.githubusercontent.com/GHAZ25/ImersaoIA/main/criaturas/espectro.jpg",
+        "atributos": {
+            "nome": "Espectro",
+            "limite": 3,
+            "locais": "Cemitérios",
+            "saude": 500,
+            "ataque": 100,
+            "defesa": 120,
+            "velocidade": 150,
+            "inteligencia": 90,
+            "encontro": 0.1,
+            "recompensa": "Moedas de prata ou espada",
+            "receber": 50
+        }
+    },{
+        "imagem": "https://raw.githubusercontent.com/GHAZ25/ImersaoIA/main/criaturas/golem.jpg",
+        "atributos": {
+            "nome": "Golem",
+            "limite": 5,
+            "locais": "Desertos e montanhas",
+            "saude": 1000,
+            "ataque": 200,
+            "defesa": 200,
+            "velocidade": 10,
+            "inteligencia": 40,
+            "encontro": 0.1,
+            "recompensa": "Moedas de ouro",
+            "receber": 100
+        }
+    }]
+}
