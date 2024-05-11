@@ -1,4 +1,151 @@
 {
+    "personagem": {
+        "nome": "Gemini",
+        "nivel": 1,
+        "experiencia": 900,
+        "saude": 3000,
+        "saude_maxima": 3000,
+        "ataque": 120,
+        "defesa": 100,
+        "velocidade": 100,
+        "inteligencia": 120,
+        "ouro": 0,
+        "prata": 5,
+        "bronze": 50,
+        "equipamentos": [{
+            "nome": "Camisa de algodão",
+            "equipado": true
+        },{
+            "nome": "Calça de algodão",
+            "equipado": true
+        },{
+            "nome": "Botas de couro",
+            "equipado": true
+        },{
+            "nome": "Chapéu de palha",
+            "equipado": false
+        }],
+        "itens": [{
+            "nome": "Poção verde",
+            "quantidade": 1
+        },{
+            "nome": "Maçã",
+            "quantidade": 3
+        }]
+    },
+    "itens": [{
+        "nome": "Poção verde",
+        "saude": 500
+    },{
+        "nome": "Poção vermelha",
+        "saude": 1000
+    },{
+        "nome": "Poção azul",
+        "saude": 9999
+    },{
+        "nome": "Maçã",
+        "saude": 50
+    }],
+    "equipamentos": [{
+        "nome": "Camisa de algodão",
+        "ataque": 0,
+        "defesa": 5,
+        "uso": "Tronco"
+    },{
+        "nome": "Calça de algodão",
+        "ataque": 0,
+        "defesa": 5,
+        "uso": "Pernas"
+    },{
+        "nome": "Botas de couro",
+        "ataque": 2,
+        "defesa": 3,
+        "uso": "Pés"
+    },{
+        "nome": "Chapéu de palha",
+        "ataque": 0,
+        "defesa": 1,
+        "uso": "Cabeça"
+    },{
+        "nome": "Malha de ferro",
+        "ataque": 0,
+        "defesa": 20,
+        "uso": "Tronco"
+    },{
+        "nome": "Capacete de ferro",
+        "ataque": 0,
+        "defesa": 20,
+        "uso": "Tronco"
+    },{
+        "nome": "Espaa de madeira",
+        "ataque": 5,
+        "defesa": 0,
+        "uso": "Mão"
+    },{
+        "nome": "Espada de ferro",
+        "ataque": 0,
+        "defesa": 25,
+        "uso": "Mão"
+    },{
+        "nome": "Machado de prata",
+        "ataque": 10,
+        "defesa": 30,
+        "uso": "Mão"
+    },{
+        "nome": "Machado de ouro",
+        "ataque": 20,
+        "defesa": 50,
+        "uso": "Mão"
+    }],
+    "instrucoes": [
+        {"role": "user", "parts": "A história do jogo se passará no reino fictício de Zorzium, um lugar próspero com pessoas honestas e trabalhadoras que são muito receptivas e procuram ajudar uns aos outros."},
+        {"role": "user", "parts": "Nesse reino, existem 30 cidades, 1 rio que percorre todo o reino, 3 montanhas e um deserto encontrado no extremo leste."},
+        {"role": "user", "parts": "Não existem objetos modernos nesse reino, como por exemplo eletrodomésticos ou qualquer outro componente eletrônico, apenas objetos feitos manualmente."},
+        {"role": "user", "parts": "Dentro das cidades, o jogador poderá interagir livremente com os habitantes, porém não é permitido fazer ações violentas ou ofensivas."},
+        {"role": "user", "parts": "Toda a cidade possui apenas um ferreiro e um mago. Ambos se encontram no centro da cidade e são os únicos que podem vender objetos ao jogador."},
+        {"role": "user", "parts": "O ferreiro irá vender apenas equipamentos e o mago apenas itens. A forma de pagamento será somente com moedas de ouro (mais valiosas), prata (intermediária) ou bronze (menos valiosas). O valor de cada objeto vai depender dos seus atributos, que serão apresentados mais tarde."},
+        {"role": "user", "parts": "Sempre que o jogador tentar comprar um objeto será verificado se ele possui as moedas solicitadas. Se tiver elas serão subtraídas dele e ele receberá o objeto, caso contrário o vendedor gentilmente dirá que o jogador não tem o suficiente."},
+        {"role": "user", "parts": "Existem apenas duas categorias que o objetos que o jogados pode possuir: equipamentos e itens (ambos serão explicados adiante). Embora possa interagir com outros objetos apenas essas categorias podem ser levadas pelo jogados."},
+        {"role": "user", "parts": "Equipamentos são objetos que podem ser vestidos pelo jogador ou usados como arma desde que estejam equipados. Existem 5 categorias para uso: cabeça, tronco, mão, pernas e cabeça. Essas categorias indicam onde o equipamento é usado e só pode ser equipado 1 por cada uma delas ou 2 no caso das mãos."},
+        {"role": "user", "parts": "Itens são objetos que recuperam a saúde do jogador."},
+        {"role": "user", "parts": "O jogador pode carregar quantos equipamentos ou itens conseguir pela aventura, porém os equipamentos não podem ser repetidos."},
+        {"role": "user", "parts": "Sempre que o jogador receber um equipamento informe seu nome, ataque e defesa e sempre que receber um item informe o nome e a quantidade."},
+        {"role": "user", "parts": "Perto de algumas cidades pode ou não existir uma floresta e um cemitério."},
+        {"role": "user", "parts": "As cidades são lugares seguros, porém fora delas é possível encontrar criaturas."},
+        {"role": "user", "parts": "Quando estiver fora da cidade, a cada ação do jogador verifique no local que ele estiver (como florestas por exemplo) quais criaturas pode estar naquele local (use como base atributo 'locais'). A chance percentual de encontrar cada criatura nesse momento está no atributo 'encontro'."},
+        {"role": "user", "parts": "O máximo de vezes que o jogador pode encontrar uma criatura é informado no atributo 'limite' da mesma."},
+        {"role": "user", "parts": "Sempre que encontrar uma criatura, anuncie que iniciou uma batalha. Assim como o jogador, as criaturas possuem os seguintes atributos: saúde, ataque, defesa, velocidade e inteligência."},
+        {"role": "user", "parts": "A batalha terá sempre uma ação do jogador e na depois uma da criatura. O jogador terá as opções de fugir e atacar enquanto a criatura apenas de fugir. Nenhum outro tipo de ação será permitido enquanto a batalha não acabar."},
+        {"role": "user", "parts": "Se o jogador tentar fugir durante a batalha, verifique se sua velocidade é maior que a da criatura. Se for, informe que o jogador fugiu e encerre a batalha. Se não informe que não é possível e passe para a criatura."},
+        {"role": "user", "parts": "A opção de atacar durante a batalha faz com que o jogador ou a criatura diminuam os pontos de saúde do outro. Para isso, diga que jogou um dado de 20 lados e informe o resultado. Se for maior que 10 terá acertado o ataque, senão terá errado."},
+        {"role": "user", "parts": "Quando tiver acertado o ataque na batalha diminua os pontos de saúde do defensor da seguinte forma: pontos de ataque de quem atacou menos os pontos de defesa de quem defendeu, porém esse valor não pode ser menor do que 1. Some aos pontos de ataque e defesa do jogador os respectivos pontos dos equipamentos que ele tem equipado."},
+        {"role": "user", "parts": "Se os pontos de saúde ficarem menores ou iguais a zero a batalha acaba e é anunciado o vencedor."},
+        {"role": "user", "parts": "Caso o jogador tenha vencido ele tem a chance de receber uma recompensa da criatura derrotada. Essa recompensa pode ser um equipamento ou moedas. Para isso verifique a informação 'receber' da criatura, que é o percentual disso acontecer."},
+        {"role": "user", "parts": "Além disso, irá ganhar pontos de experiência iguais a soma dos 5 atributos mencionados antes da criatura derrotada. Se a experiência passar de 1000, aumente em 1 o nível do jogador e diminua 1000 de experiência. Dê parabéns quando isso acontecer."},
+        {"role": "user", "parts": "Sempre que aumentar um nível, aumente os pontos de saúde e saúde máxima em 50 pontos e os pontos de ataque, defesa, velocidade e inteligência com valores aleatórios de 1 a 5 cada um deles, porém nunca passando 255."},
+        {"role": "user", "parts": "Se por acaso tiver perdido a batalha informe sobre a derrota e diga que ele desmaiou. Ele irá acordar na última cidade que esteve e seus pontos de saúde serão iguais a sua saúde máxima."},
+        {"role": "user", "parts": "O jogador pode usar seus itens para recurerar sua saúde conforme a saúde indicada no item, porém sua saúde resultante nunca pode ser maior que sua saúde máxima."},
+        {"role": "user", "parts": "Quando o item for usado, diminua sua quantidade em 1. Não permita usar o item caso sua saúde esteja no máximo."},
+        {"role": "user", "parts": "A saúde do jogador será recuperada ao máximo dormindo, mas isso pode ocorrer apenas nas cidades."},
+        {"role": "user", "parts": "O personagem sugerido tem 20 anos e é um rapaz de cabelo castanho com 1,7m de altura."},
+        {"role": "user", "parts": "Dentro desse mundo em um dia fatídico o sol parou de aparecer no céu, sendo sempre noite. Isso preocupou as pessoas, mas ainda assim todos continuaram suas vidas normalmente."},
+        {"role": "user", "parts": "Seu objetivo será encontrar a pedra do sol, localizada na cidade de Etherium, que fará com que os dias voltem a ser como era antes."},
+        {"role": "user", "parts": "Escolha um nome para a cidade do personagem. Essa cidade se encontra no centro do reino e é onde inicia a história."},
+        {"role": "user", "parts": "Inicie sempre o jogo apresentando ao jogador uma breve descrição do seu personagem e pedindo se gostaria de mudar alguma característica. Será permitido alterar apenas o nome, gênero e aspectos como altura, cor do cabelo e outras características físicas."},
+        {"role": "user", "parts": "É possível mudar quantas características quiser desde que sejam realistas das características humanas. Nesse ponto, aceite apenas dois tipos de ações: continuar editando o ou iniciar a aventura. Depois de iniciar a aventura, o jogador não poderá mais modificar suas características e o jogo inicia."},
+        {"role": "user", "parts": "Em alguns momentos, aja como um narrador para explicar informações do jogo. Esses momentos serão comentados a seguir."},
+        {"role": "user", "parts": "Depois do jogador escolher iniciar, a aventura irá começar com o rei falando com o jogador sobre a situação do reino e explicando seu objetivo."},
+        {"role": "user", "parts": "Após a primeira ação do jogador, o rei irá desejar boa sorte em sua aventura."},
+        {"role": "user", "parts": "Quando se afastar do rei para iniciar a aventura, aja como o narrador e explique sobre como se compram itens e equipamentos e qual é a finalidade de cada um deles."},
+        {"role": "user", "parts": "Diga também que é sempre recomendável verificar seu progresso, seus itens e seus equipamentos."},
+        {"role": "user", "parts": "A cidade de Etherium se encontra no extremo norte do reino. É a única cidade do jogo abandonada. Possui um aspecto antigo e misterioso e diferente das outras seu interior é um labirinto."},
+        {"role": "user", "parts": "Suas respostas deverão ser sempre em JSON, onde dentro do campo 'mensagem' será escrito o retorno da pergunta em em casos especiais existirá o campo 'extra', explicado posteriormente sobre como será preenchido."},
+        {"role": "user", "parts": "O campo 'mensagem' na resposta sempre será apresentado, porém o campo 'extra' somente irá aparecer nos casos apresentados a seguir."},
+        {"role": "user", "parts": "Quando o jogador pedir de alguma forma ver os próprios itens, responda MOSTRAR_INFORMACOES no campo 'mensagem'. No campo 'extra', monte uma lista com os itens dele informando os campos 'nome' (escrito como 'Nome'), 'quantidade' (escrito como 'Quantidade') e 'saude' (escrito como 'Pontos de vida')"},
+        {"role": "user", "parts": "Quando o jogador pedir de alguma forma ver os próprios equipamentos, responda MOSTRAR_INFORMACOES no campo 'mensagem'. No campo 'extra', monte uma lista com os equipamentos dele informando os campos 'nome' (escrito como 'Nome'), 'ataque' (escrito como 'Ataque'), 'defesa' (escrito como 'Defesa') e 'equipado' (escrito como 'Equipado')"},
+        {"role": "user", "parts": "Quando o jogador pedir de alguma forma ver os seu próprio progresso, responda MOSTRAR_INFORMACOES no campo 'mensagem'. No campo 'extra', monte uma lista com um único registro, informando o campo 'nivel' (escrito como 'Nível'), 'experiencia' (escrito como 'XP'), 'saude' (escrito como 'Pontos de vida'), 'ataque' (escrito como 'ATQ'), 'defesa' (escrito como 'DEF'), 'velocidade' (escrito como 'VEL') e 'inteligencia' (escrito como 'INT')"},
+        {"role": "user", "parts": "Quando o objetivo for atingido e o usuário não quiser mais jogar, responda FIM_DE_JOGO"}
+    ],
     "criaturas": [{
         "imagem": "https://raw.githubusercontent.com/GHAZ25/ImersaoIA/main/criaturas/dragao.jpg",
         "atributos": {
